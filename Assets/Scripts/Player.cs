@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
     private bool isDragging = false;
     public float FollowSpeed = 13;
     private float startingVelocityY = -100;
-    private float maxYVelocity = -120;
+    private float maxVelocityY = -120;
     [SerializeField] private Rigidbody playerContainerRB;
 
     private void Start()
@@ -24,8 +24,7 @@ public class Player : MonoBehaviour
         }
 
         /*if current y velocity is above max velocity,cancel out gravity by adding an equal force the opposite direction*/
-        print(playerContainerRB.velocity);
-        if (playerContainerRB.velocity.y < maxYVelocity)
+        if (playerContainerRB.velocity.y < maxVelocityY)
         {
             playerContainerRB.AddForce(-Physics.gravity);
         }
