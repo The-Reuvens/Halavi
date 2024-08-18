@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9d8800641aba18b23a49dd068a09053e
+guid: e45708c5a9884b073a232bae4ccb847c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -97,75 +97,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sprite_sheet(3)_0
+      name: player-fatso_0
       rect:
         serializedVersion: 2
-        x: 170
-        y: 804
-        width: 709
-        height: 595
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bd620bd993d7d7379b0c90fed1e3cded
-      internalID: 1062537334
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprite_sheet(3)_1
-      rect:
-        serializedVersion: 2
-        x: 1213
-        y: 812
-        width: 714
-        height: 575
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3ed5642c7246a4a5f9965ebf82c86f4c
-      internalID: -1592073061
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprite_sheet(3)_2
-      rect:
-        serializedVersion: 2
-        x: 2093
-        y: 732
-        width: 1048
-        height: 734
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0187fa43ef94dcd398674bdeb10335d9
-      internalID: -1070588984
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprite_sheet(3)_3
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 1
-        width: 1031
+        x: 0
+        y: 0
+        width: 1047
         height: 733
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -174,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 954b372d05596a5839dbeebcd1f993fc
-      internalID: 162727495
+      spriteID: 379641ff790cf65c182e8ed0afd9c661
+      internalID: 395857719
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite_sheet(3)_4
+      name: player-fatso_1
       rect:
         serializedVersion: 2
-        x: 1226
-        y: 77
-        width: 689
-        height: 579
+        x: 1047
+        y: 0
+        width: 1047
+        height: 733
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,29 +132,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fdb27a08e822a113b9306af8584a46c8
-      internalID: -282862401
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprite_sheet(3)_5
-      rect:
-        serializedVersion: 2
-        x: 2267
-        y: 68
-        width: 709
-        height: 595
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 50f94253d75cac5d48abbca645b7223c
-      internalID: -2119363780
+      spriteID: 5b13f6a471b2fb1fb872d0bbd1efcf9c
+      internalID: 204119356
       vertices: []
       indices: 
       edges: []
@@ -225,7 +141,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 9734bb69f339aba34bbf73322071c51d
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -233,12 +149,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      sprite_sheet(3)_0: 1062537334
-      sprite_sheet(3)_1: -1592073061
-      sprite_sheet(3)_2: -1070588984
-      sprite_sheet(3)_3: 162727495
-      sprite_sheet(3)_4: -282862401
-      sprite_sheet(3)_5: -2119363780
+      player-fatso_0: 395857719
+      player-fatso_1: 204119356
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
