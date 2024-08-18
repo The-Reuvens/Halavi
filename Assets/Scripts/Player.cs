@@ -6,7 +6,9 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-    private bool isMouseOver = false;
+    private bool isMouseDrag = false;
+    private bool movementEnabled = false;
+    public float FollowSpeed = 100f;
     void Start()
     {
 
@@ -14,20 +16,22 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Mouse.current.leftButton.isPressed == true && isMouseOver)
+
+        if (Mouse.current.leftButton.isPressed == true && isMouseDrag)
         {
             Vector3 mousePos = Input.mousePosition;
             mousePos.z = -Camera.main.transform.localPosition.z;
             mousePos = Camera.main.ScreenToWorldPoint(mousePos);
-            transform.position = mousePos;
+
+            transform.position = Vector3.Lerp(transform.position, mousePos, FollowSpeed * Time.deltaTime);
         }
     }
-    private void OnMouseOver()
+    private void OnMouseDrag()
     {
-        isMouseOver = true;
+        isMouseDrag = true;
     }
-    private void OnMouseExit()
+    private void OnMouseUp()
     {
-        isMouseOver = false;
+        isMouseDrag = false;
     }
 }
