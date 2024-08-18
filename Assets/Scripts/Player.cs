@@ -1,10 +1,19 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(Animator))]
+
 public class Player : MonoBehaviour
 {
     private bool isDragging = false;
     public float FollowSpeed = 13;
+    public Animator Animator { get; private set; }
+    public Animation[] WeightSpriteAnimations;
+
+    private void Start()
+    {
+        Animator = GetComponent<Animator>();
+    }
 
     void FixedUpdate()
     {
