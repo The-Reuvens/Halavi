@@ -1,37 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.IO;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-    private bool isMouseDrag = false;
-    private bool movementEnabled = false;
-    public float FollowSpeed = 100f;
-    void Start()
-    {
-
-    }
+    private bool isDragging = false;
+    public float FollowSpeed = 13;
 
     void FixedUpdate()
     {
-
-        if (Mouse.current.leftButton.isPressed == true && isMouseDrag)
+        if (isDragging && Mouse.current.leftButton.isPressed)
         {
-            Vector3 mousePos = Input.mousePosition;
-            mousePos.z = -Camera.main.transform.localPosition.z;
-            mousePos = Camera.main.ScreenToWorldPoint(mousePos);
+            Vector3 targetPosition = Input.mousePosition;
+            targetPosition.z = -Camera.main.transform.localPosition.z;
+            targetPosition = Camera.main.ScreenToWorldPoint(targetPosition);
 
-            transform.position = Vector3.Lerp(transform.position, mousePos, FollowSpeed * Time.deltaTime);
+            transform.position = Vector3.Lerp(transform.position, targetPosition, FollowSpeed * Time.deltaTime);
         }
     }
-    private void OnMouseDrag()
-    {
-        isMouseDrag = true;
-    }
-    private void OnMouseUp()
-    {
-        isMouseDrag = false;
-    }
+
+    private void OnMouseDrag() => isDragging = true;
+    private void OnMouseUp() => isDragging = false;
 }
