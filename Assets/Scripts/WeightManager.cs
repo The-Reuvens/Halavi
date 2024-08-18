@@ -61,18 +61,6 @@ public class WeightManager : MonoBehaviour
 
     public WeightMode GetMode() => mode;
 
-    private void Update()
-    {
-        if (Mouse.current.leftButton.isPressed)
-        {
-            Weight += 2;
-        }
-        else if (Mouse.current.rightButton.isPressed)
-        {
-            Weight -= 2;
-        }
-    }
-
     private void SetMode(WeightMode mode)
     {
         if (mode == WeightMode.NULL) return;
