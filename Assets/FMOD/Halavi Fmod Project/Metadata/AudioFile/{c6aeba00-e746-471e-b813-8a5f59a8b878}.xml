@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{c6aeba00-e746-471e-b813-8a5f59a8b878}">
+		<property name="assetPath">
+			<value>Chicken/Chicken SFX.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.1606802721088436</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{28999eb3-ec76-4611-b5da-e4013e078e85}</destination>
+		</relationship>
+	</object>
+</objects>

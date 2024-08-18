@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{a72498f5-d494-4b2a-a0dc-bf2853a8b484}">
+		<property name="assetPath">
+			<value>Music/in game reach calories-1.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>95.403741496598641</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{28999eb3-ec76-4611-b5da-e4013e078e85}</destination>
+		</relationship>
+	</object>
+</objects>

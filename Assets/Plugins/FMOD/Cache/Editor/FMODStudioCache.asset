@@ -21,7 +21,7 @@ MonoBehaviour:
   - {fileID: 8952147343088746440}
   StringsBanks:
   - {fileID: 8291732082946153315}
-  cacheTime: 638594847349819371
+  cacheTime: 638594538530702218
   cacheVersion: 131619
 --- !u!114 &8291732082946153315
 MonoBehaviour:
@@ -38,7 +38,7 @@ MonoBehaviour:
   Path: Assets/FMOD/Halavi Fmod Project/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Banks/Master.strings
-  lastModified: 638594847349819371
+  lastModified: 638594538530702218
   FileSizes:
   - Name: Desktop
     Value: 718
@@ -58,7 +58,7 @@ MonoBehaviour:
   Path: Assets/FMOD/Halavi Fmod Project/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Banks/Master
-  lastModified: 638594847349809391
+  lastModified: 638594538530691162
   FileSizes:
   - Name: Desktop
     Value: 1036
