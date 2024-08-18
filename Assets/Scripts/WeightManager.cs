@@ -30,7 +30,7 @@ public class WeightManager : MonoBehaviour
         {
             WeightSetType weightSetType = value > weight ? WeightSetType.GAIN : WeightSetType.LOSE;
 
-            weight = value;
+            weight = Mathf.Max(0, value);
 
             weightText.SetText($"{weight}kg");
             weightText.transform.LeanScale(1.25f * Vector3.one, 0.2f);
@@ -46,8 +46,6 @@ public class WeightManager : MonoBehaviour
             float weightPercentage = weight / WeightThreshold;
 
             player.transform.LeanScale((1 + weightPercentage) * Vector3.one, 0.4f).setEaseInOutBounce();
-
-
 
             SetMode(value switch
             {
@@ -79,7 +77,7 @@ public class WeightManager : MonoBehaviour
 
         weightText.color = mode switch
         {
-            WeightMode.THIN => Color.red,
+            WeightMode.THIN => Color.green,
             WeightMode.FAT => Color.yellow,
             WeightMode.FATSO => new Color(1, 0.3488759f, 0),
             _ => Color.black
