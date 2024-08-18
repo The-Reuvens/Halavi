@@ -1,5 +1,60 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-2667995837318786311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/In Game Music
+  m_EditorClassIdentifier: 
+  Path: event:/In Game Music
+  Guid:
+    Data1: 1846611994
+    Data2: 1135412181
+    Data3: 1862893210
+    Data4: 1689983769
+  Banks:
+  - {fileID: 8952147343088746440}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 9062242245895023709}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 195403
+--- !u!114 &-2018775066281286911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Power Up
+  m_EditorClassIdentifier: 
+  Path: event:/Power Up
+  Guid:
+    Data1: -1169771044
+    Data2: 1299777294
+    Data3: -1772190546
+    Data4: -2101923218
+  Banks:
+  - {fileID: 8952147343088746440}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,14 +70,44 @@ MonoBehaviour:
   EditorBanks:
   - {fileID: 8291732082946153315}
   - {fileID: 8952147343088746440}
-  EditorEvents: []
+  EditorEvents:
+  - {fileID: -2667995837318786311}
+  - {fileID: 7350741507581406273}
+  - {fileID: -2018775066281286911}
   EditorParameters: []
   MasterBanks:
   - {fileID: 8952147343088746440}
   StringsBanks:
   - {fileID: 8291732082946153315}
-  cacheTime: 638594538530702218
+  cacheTime: 638596113856366632
   cacheVersion: 131619
+--- !u!114 &7350741507581406273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Eating Chicken
+  m_EditorClassIdentifier: 
+  Path: event:/Eating Chicken
+  Guid:
+    Data1: 632057701
+    Data2: 1108449523
+    Data3: 2146780062
+    Data4: 1847921667
+  Banks:
+  - {fileID: 8952147343088746440}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &8291732082946153315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37,11 +122,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/FMOD/Halavi Fmod Project/Build/Desktop/Master.strings.bank
   Name: Master.strings
-  StudioPath: bank:/Banks/Master.strings
-  lastModified: 638594538530702218
+  StudioPath: bank:/Master.strings
+  lastModified: 638596113856366632
   FileSizes:
   - Name: Desktop
-    Value: 718
+    Value: 922
   Exists: 1
 --- !u!114 &8952147343088746440
 MonoBehaviour:
@@ -57,9 +142,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/FMOD/Halavi Fmod Project/Build/Desktop/Master.bank
   Name: Master
-  StudioPath: bank:/Banks/Master
-  lastModified: 638594538530691162
+  StudioPath: bank:/Master
+  lastModified: 638596113856366632
   FileSizes:
   - Name: Desktop
-    Value: 1036
+    Value: 2873600
+  Exists: 1
+--- !u!114 &9062242245895023709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 'parameter:/In Game Music/reachWeightThreshold '
+  m_EditorClassIdentifier: 
+  Name: 'reachWeightThreshold '
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1691546399
+    data2: 1286871828
+  Type: 0
+  IsGlobal: 0
+  Labels: []
   Exists: 1
