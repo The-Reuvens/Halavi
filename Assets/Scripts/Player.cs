@@ -2,18 +2,23 @@ using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(Animator))]
+
 public class Player : MonoBehaviour
 {
     private bool isDragging = false;
     public float FollowSpeed = 13;
     private readonly float startingVelocityY = -100;
     private float maxVelocityY = -120;
-    [SerializeField] [NotNull] private Rigidbody playerContainerRB;
+    [SerializeField][NotNull] private Rigidbody playerContainerRB;
+    public Animator Animator { get; private set; }
 
     private void Start()
-    {        
+    {
+        Animator = GetComponent<Animator>();
         playerContainerRB.velocity = new Vector3(0, startingVelocityY, 0);
     }
+
     void FixedUpdate()
     {
         if (isDragging && Mouse.current.leftButton.isPressed)
