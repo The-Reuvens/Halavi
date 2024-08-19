@@ -8,8 +8,8 @@ public class Player : MonoBehaviour
 {
     private bool isDragging = false;
     public float FollowSpeed = 13;
-    private readonly float startingVelocityY = -100;
-    private float maxVelocityY = -120;
+    [SerializeField] private float startingVelocityY = -100;
+    [SerializeField] private float maxVelocityY = -120;
     [SerializeField][NotNull] private Rigidbody playerContainerRB;
     public GameObject PlayerClone;
     public Animator Animator { get; private set; }
