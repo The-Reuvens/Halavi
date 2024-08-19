@@ -385,15 +385,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 726191076}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.19943015, y: 0.19943017, z: 0.19943017}
+  m_LocalPosition: {x: 0, y: 0, z: -507.1973}
+  m_LocalScale: {x: 101.15044, y: 101.150444, z: 101.150444}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 914673418}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 503.06805, y: 1436.8623}
+  m_AnchoredPosition: {x: 0.0035095215, y: 0.030273438}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &914673414
@@ -491,6 +491,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1731480621}
+  - {fileID: 726191079}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -712,6 +713,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FollowSpeed: 13
+  startingVelocityY: -100
+  maxVelocityY: -120
   playerContainerRB: {fileID: 1925212344}
   PlayerClone: {fileID: 430197416}
 --- !u!54 &1071106199
@@ -6013,5 +6016,4 @@ SceneRoots:
   - {fileID: 705507995}
   - {fileID: 1194398664}
   - {fileID: 1925212343}
-  - {fileID: 726191079}
   - {fileID: 2080610531}
