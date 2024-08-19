@@ -1,4 +1,5 @@
 using System.Diagnostics.CodeAnalysis;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -12,6 +13,14 @@ public class Player : MonoBehaviour
     private float maxVelocityY = -120;
     [SerializeField][NotNull] private Rigidbody playerContainerRB;
     public Animator Animator { get; private set; }
+    // baloon mode variables
+    private bool isInBaloonMode = false;
+    private float baloonModeDuration = 1;
+    private float timeInBaloonMode = 0;
+    private readonly float borderX = 19.2f;
+    private readonly float borderZ = 9.85f;
+    private float randomPositionX = 0;
+    private float randomPositionZ = 0;
 
     private void Start()
     {
@@ -21,12 +30,13 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (isDragging && Mouse.current.leftButton.isPressed)
+        if (isDragging)
         {
             Vector3 targetPosition = Input.mousePosition;
             targetPosition.z = -Camera.main.transform.localPosition.z;
             targetPosition = Camera.main.ScreenToWorldPoint(targetPosition);
-            transform.position = Vector3.Lerp(transform.position, targetPosition, FollowSpeed * Time.deltaTime);
+            //this line v makes you move to a random location if you are in baloon mode
+            transform.position = Vector3.Lerp(transform.position, !isInBaloonMode? targetPosition : new Vector3(randomPositionX, transform.position.y, randomPositionZ), FollowSpeed * Time.deltaTime);
         }
 
         /*if current y velocity is above max velocity,cancel out gravity by adding an equal force the opposite direction*/
@@ -34,8 +44,45 @@ public class Player : MonoBehaviour
         {
             playerContainerRB.AddForce(-Physics.gravity);
         }
+
+        if (isInBaloonMode == true) {
+            timeInBaloonMode += Time.deltaTime;
+            if (timeInBaloonMode > baloonModeDuration) {
+                timeInBaloonMode = 0;
+                if(isDragging == false)
+                {
+                    isInBaloonMode = false;
+                }
+            }
+        }
+
+        /*if player is hurt, enter baloon mode, subtract */
+        if (Mouse.current.rightButton.isPressed && isInBaloonMode == false)
+        {
+            OnPlayerHurt();
+        }
+    }
+    private void OnPlayerHurt()
+    {
+        isInBaloonMode = true;
+        GenerateRandomPosition();
     }
 
-    private void OnMouseDrag() => isDragging = true;
-    private void OnMouseUp() => isDragging = false;
+    private void GenerateRandomPosition()
+    {
+        randomPositionX = Random.Range(-borderX, borderX);
+        randomPositionZ = Random.Range(-borderZ, borderZ);
+        print(randomPositionX + " , " +randomPositionZ);
+
+    }
+
+    private void OnMouseDrag() {
+        if (isInBaloonMode == false) { 
+            isDragging = true; 
+        }
+    }
+    private void OnMouseUp()
+    {
+        isDragging = false;
+    }
 }
