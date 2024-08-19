@@ -38,4 +38,5 @@ public class Player : MonoBehaviour
 
     private void OnMouseDrag() => isDragging = true;
     private void OnMouseUp() => isDragging = false;
+    public Vector3 GetVelocity() => playerContainerRB.velocity;
 }
