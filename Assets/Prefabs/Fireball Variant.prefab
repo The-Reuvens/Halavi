@@ -80,6 +80,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 8366788722192908314, guid: 5d9d0f940cf4fefc3827924070dea68e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8366788722192908314, guid: 5d9d0f940cf4fefc3827924070dea68e, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8366788722192908314, guid: 5d9d0f940cf4fefc3827924070dea68e, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1308085147
+      objectReference: {fileID: 0}
     - target: {fileID: 8561329876568644914, guid: 5d9d0f940cf4fefc3827924070dea68e, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
@@ -152,6 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449840a77ac12023880d559e22056462, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isEnemy: 1
   slowMotion: 0
   weightFactor: -50
   audioClipID: 

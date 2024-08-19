@@ -53,6 +53,16 @@ public class WeightManager : MonoBehaviour
                 float v when mode == WeightMode.FAT && v >= WeightThreshold / 3 * 2 && v < WeightThreshold => WeightMode.FATSO,
                 _ => WeightMode.NULL
             });
+
+            if (weightSetType == WeightSetType.GAIN)
+            {
+                var playerClone = player.PlayerClone;
+
+                playerClone.transform.localPosition = player.transform.localPosition;
+                playerClone.LeanScale(2f * Vector3.one, 1f).setEaseOutExpo();
+                LeanTween.alpha(playerClone, 0, 1f).setEaseOutExpo();
+
+            }
         }
     }
 

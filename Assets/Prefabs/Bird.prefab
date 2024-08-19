@@ -121,10 +121,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449840a77ac12023880d559e22056462, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isEnemy: 1
+  slowMotion: 1
   weightFactor: -20
   audioClipID: 
   collisionAudioClipID: 
-  rb: {fileID: -6670075669278297065}
 --- !u!65 &5624879086568178070
 BoxCollider:
   m_ObjectHideFlags: 0

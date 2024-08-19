@@ -11,12 +11,14 @@ public class Player : MonoBehaviour
     private readonly float startingVelocityY = -100;
     private float maxVelocityY = -120;
     [SerializeField][NotNull] private Rigidbody playerContainerRB;
+    public GameObject PlayerClone;
     public Animator Animator { get; private set; }
 
     private void Start()
     {
         Animator = GetComponent<Animator>();
         playerContainerRB.velocity = new Vector3(0, startingVelocityY, 0);
+        LeanTween.alpha(PlayerClone, 0, 0);
     }
 
     void FixedUpdate()

@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Transform obstacalesContainer;
     [SerializeField] private GameObject[] foodPrefabs;
     [SerializeField] private GameObject[] enemyPrefabs;
+    public GameObject BloodParticles;
 
     [Header("------- Modifiers -------")]
     public int SlowMotionDurationInMS = 200;
