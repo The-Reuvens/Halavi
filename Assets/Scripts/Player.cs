@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     private bool isInBaloonMode = false;
     private float baloonModeDuration = 1;
     private float timeInBaloonMode = 0;
+    [SerializeField] private float baloonModeFollowSpeed = 1 / 3;
     private readonly float borderX = 19.2f;
     private readonly float borderZ = 9.85f;
     private float randomPositionX = 0;
@@ -36,7 +37,7 @@ public class Player : MonoBehaviour
             targetPosition.z = -Camera.main.transform.localPosition.z;
             targetPosition = Camera.main.ScreenToWorldPoint(targetPosition);
             //this line v makes you move to a random location if you are in baloon mode
-            transform.position = Vector3.Lerp(transform.position, !isInBaloonMode? targetPosition : new Vector3(randomPositionX, transform.position.y, randomPositionZ), FollowSpeed * Time.deltaTime);
+            transform.position = Vector3.Lerp(transform.position, !isInBaloonMode? targetPosition : new Vector3(randomPositionX, transform.position.y, randomPositionZ), !isInBaloonMode? FollowSpeed * Time.deltaTime : FollowSpeed * baloonModeFollowSpeed * Time.deltaTime);
         }
 
         /*if current y velocity is above max velocity,cancel out gravity by adding an equal force the opposite direction*/
@@ -49,6 +50,8 @@ public class Player : MonoBehaviour
             timeInBaloonMode += Time.deltaTime;
             if (timeInBaloonMode > baloonModeDuration) {
                 timeInBaloonMode = 0;
+                //TODO: add player recovery from baloon mode sound effect here v
+
                 if(isDragging == false)
                 {
                     isInBaloonMode = false;
@@ -56,7 +59,7 @@ public class Player : MonoBehaviour
             }
         }
 
-        /*if player is hurt, enter baloon mode, subtract */
+        /*if player is hurt, enter baloon mode*/
         if (Mouse.current.rightButton.isPressed && isInBaloonMode == false)
         {
             OnPlayerHurt();
@@ -65,6 +68,8 @@ public class Player : MonoBehaviour
     private void OnPlayerHurt()
     {
         isInBaloonMode = true;
+        // TODO: add player hurt sound (enter baloon mode) effect here v
+
         GenerateRandomPosition();
     }
 
@@ -72,8 +77,6 @@ public class Player : MonoBehaviour
     {
         randomPositionX = Random.Range(-borderX, borderX);
         randomPositionZ = Random.Range(-borderZ, borderZ);
-        print(randomPositionX + " , " +randomPositionZ);
-
     }
 
     private void OnMouseDrag() {
