@@ -1,7 +1,8 @@
+using System;
 using System.Diagnostics.CodeAnalysis;
-using System.Threading;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(Animator))]
 
@@ -13,15 +14,16 @@ public class Player : MonoBehaviour
     private float maxVelocityY = -120;
     [SerializeField][NotNull] private Rigidbody playerContainerRB;
     public Animator Animator { get; private set; }
-    // baloon mode variables
-    private bool isInBaloonMode = false;
-    private float baloonModeDuration = 1;
-    private float timeInBaloonMode = 0;
-    [SerializeField] private float baloonModeFollowSpeed = 1 / 3;
-    private readonly float borderX = 19.2f;
-    private readonly float borderZ = 9.85f;
-    private float randomPositionX = 0;
-    private float randomPositionZ = 0;
+
+    // Hurt Mode
+    private bool isHurt;
+    private bool lockDrag = false;
+
+    [SerializeField] private Vector2 hurtModeCooldownRangeInSec = new(0.7f, 1.2f);
+    [SerializeField] private float minHurtBounceDistance = 5;
+
+    private readonly float[] BorderXRange = { -18.75f, 19.7f };
+    private readonly float[] BorderYRange = { -10.8f, 8.8f };
 
     private void Start()
     {
@@ -31,13 +33,13 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (isDragging)
+        if (isDragging && !isHurt && !lockDrag)
         {
             Vector3 targetPosition = Input.mousePosition;
             targetPosition.z = -Camera.main.transform.localPosition.z;
             targetPosition = Camera.main.ScreenToWorldPoint(targetPosition);
-            //this line v makes you move to a random location if you are in baloon mode
-            transform.position = Vector3.Lerp(transform.position, !isInBaloonMode? targetPosition : new Vector3(randomPositionX, transform.position.y, randomPositionZ), !isInBaloonMode? FollowSpeed * Time.deltaTime : FollowSpeed * baloonModeFollowSpeed * Time.deltaTime);
+
+            transform.position = Vector3.Lerp(transform.position, targetPosition, FollowSpeed * Time.deltaTime);
         }
 
         /*if current y velocity is above max velocity,cancel out gravity by adding an equal force the opposite direction*/
@@ -46,46 +48,61 @@ public class Player : MonoBehaviour
             playerContainerRB.AddForce(-Physics.gravity);
         }
 
-        if (isInBaloonMode == true) {
-            timeInBaloonMode += Time.deltaTime;
-            if (timeInBaloonMode > baloonModeDuration) {
-                timeInBaloonMode = 0;
-                //TODO: add player recovery from baloon mode sound effect here v
-
-                if(isDragging == false)
-                {
-                    isInBaloonMode = false;
-                }
-            }
-        }
-
         /*if player is hurt, enter baloon mode*/
-        if (Mouse.current.rightButton.isPressed && isInBaloonMode == false)
+        if (Mouse.current.rightButton.isPressed && !isHurt)
         {
-            OnPlayerHurt();
+            Hurt();
         }
     }
-    private void OnPlayerHurt()
+
+    private void OnMouseDrag()
     {
-        isInBaloonMode = true;
-        // TODO: add player hurt sound (enter baloon mode) effect here v
-
-        GenerateRandomPosition();
-    }
-
-    private void GenerateRandomPosition()
-    {
-        randomPositionX = Random.Range(-borderX, borderX);
-        randomPositionZ = Random.Range(-borderZ, borderZ);
-    }
-
-    private void OnMouseDrag() {
-        if (isInBaloonMode == false) { 
-            isDragging = true; 
+        if (!lockDrag)
+        {
+            isDragging = true;
         }
     }
-    private void OnMouseUp()
+    private void OnMouseOver()
     {
+        if (lockDrag && !isHurt)
+        {
+            lockDrag = false;
+
+            // Stop tween midway
+            LeanTween.cancel(gameObject);
+        }
+    }
+    private void OnMouseUp() => isDragging = false;
+
+    public void Hurt()
+    {
+        isHurt = true;
         isDragging = false;
+        lockDrag = true;
+
+        //TODO: Change animator/sprite of player
+
+        float duration = Random.Range(hurtModeCooldownRangeInSec.x, hurtModeCooldownRangeInSec.y);
+
+        Vector3 newPosition = new(
+            Random.Range(BorderXRange[0], BorderXRange[1]),
+            Random.Range(BorderYRange[0], BorderYRange[1]),
+            transform.localPosition.z
+        );
+
+        while (Vector3.Distance(newPosition, transform.localPosition) < minHurtBounceDistance)
+        {
+            newPosition = new(
+                Random.Range(BorderXRange[0], BorderXRange[1]),
+                Random.Range(BorderYRange[0], BorderYRange[1]),
+                transform.localPosition.z
+            );
+        }
+
+        transform.LeanMoveLocal(newPosition, duration).setEaseOutCirc().setOnComplete(() =>
+        {
+            isHurt = false;
+            //TODO: Change back animator/sprite of player
+        });
     }
 }
