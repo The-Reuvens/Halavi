@@ -50,11 +50,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7869637872748882156, guid: 97e2c237ae6a9bf42a8f337ec6beec21, type: 3}
       propertyPath: m_Name
-      value: FoodTemplate Variant
+      value: Sufganiyah
       objectReference: {fileID: 0}
     - target: {fileID: 7869637872748882156, guid: 97e2c237ae6a9bf42a8f337ec6beec21, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7869637872748882156, guid: 97e2c237ae6a9bf42a8f337ec6beec21, type: 3}
+      propertyPath: m_TagString
+      value: Food
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -74,7 +74,7 @@ public class Player : MonoBehaviour
         isHurt = true;
         isDragging = false;
         lockDrag = true;
-
+        //TODO: add player hurt sounds
         //TODO: Change animator/sprite of player
 
         float duration = Random.Range(hurtModeCooldownRangeInSec.x, hurtModeCooldownRangeInSec.y);

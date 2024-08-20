@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -6670075669278297065}
   m_Layer: 0
   m_Name: Bird
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124,8 +124,9 @@ MonoBehaviour:
   isEnemy: 1
   slowMotion: 1
   weightFactor: -20
-  audioClipID: 
-  collisionAudioClipID: 
+  audioClipIds: []
+  collisionAudioClipIds: []
+  slowMotionFollowSpeed: 2
 --- !u!65 &5624879086568178070
 BoxCollider:
   m_ObjectHideFlags: 0
