@@ -40,11 +40,13 @@ public class Obstacale : MonoBehaviour
         if (!slowMotion && !hasEnteredVision && Vector3.Distance(player.transform.position, transform.position) <= 300)
         {
             hasEnteredVision = true;
-            //TODO: Play Audio based on clipID - Longlasting obstacale sound
-            //FMODUnity.RuntimeManager.PlayOneShot($"event:/${audioClipIds[OMath.rnd.Next(0, audioClipIds.Length)]}", transform.position);
-
-        }
-        else if (
+            if (audioClipIds.Length > 0)
+            {
+                //TODO: Play Audio based on clipID - Longlasting obstacale sound
+                //FMODUnity.RuntimeManager.PlayOneShot($"event:/${audioClipIds[OMath.rnd.Next(0, audioClipIds.Length)]}", transform.position);
+            }
+            }
+            else if (
             slowMotion &&
             !hasSlowMotioned &&
             transform.position.y >= player.transform.position.y - Buffer &&
@@ -58,10 +60,10 @@ public class Obstacale : MonoBehaviour
             rb.velocity = player.GetVelocity() * 0.9f;
 
             player.FollowSpeed = slowMotionFollowSpeed;
-
-            //TODO: Play Audio based on clipID - One shot obstacale sound
-            //FMODUnity.RuntimeManager.PlayOneShot($"event:/${audioClipIds[OMath.rnd.Next(0, audioClipIds.Length)]}", transform.position);
-
+            if (audioClipIds.Length > 0) {
+                //TODO: Play Audio based on clipID - One shot obstacale sound
+                FMODUnity.RuntimeManager.PlayOneShot($"event:/{audioClipIds[OMath.rnd.Next(0, audioClipIds.Length)]}", transform.position);
+                 }
             await Task.Delay(GameManager.Instance.SlowMotionDurationInMS);
 
             player.FollowSpeed = 13;
@@ -82,7 +84,7 @@ public class Obstacale : MonoBehaviour
             hasCollided = true;
 
             //TODO: Play Audio based on clipID - Collision
-            //FMODUnity.RuntimeManager.PlayOneShot($"event:/${collisionAudioClipIds[OMath.rnd.Next(0, collisionAudioClipIds.Length)]}", transform.position);
+            FMODUnity.RuntimeManager.PlayOneShot($"event:/{collisionAudioClipIds[OMath.rnd.Next(0, collisionAudioClipIds.Length)]}", transform.position);
 
             GameManager.Instance.WeightManager.Weight += weightFactor;
 

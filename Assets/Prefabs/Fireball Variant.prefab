@@ -125,6 +125,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1981946010067892870, guid: 5d9d0f940cf4fefc3827924070dea68e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1284013286811961854}
+    - targetCorrespondingSourceObject: {fileID: 1981946010067892870, guid: 5d9d0f940cf4fefc3827924070dea68e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2592677788096985809}
   m_SourcePrefab: {fileID: 100100000, guid: 5d9d0f940cf4fefc3827924070dea68e, type: 3}
 --- !u!1 &6668752884375012413 stripped
 GameObject:
@@ -167,8 +170,10 @@ MonoBehaviour:
   isEnemy: 1
   slowMotion: 0
   weightFactor: -50
-  audioClipID: 
-  collisionAudioClipID: 
+  audioClipIds: []
+  collisionAudioClipIds:
+  - Fire Ball
+  slowMotionFollowSpeed: 2
 --- !u!54 &1284013286811961854
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -196,3 +201,34 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2592677788096985809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6668752884375012413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -2051744528
+      Data2: 1151638537
+      Data3: 1205727878
+      Data4: 691440287
+    Path: event:/Static fire ball
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20

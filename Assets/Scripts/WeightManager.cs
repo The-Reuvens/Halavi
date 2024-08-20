@@ -1,7 +1,7 @@
 using System;
 using TMPro;
 using UnityEngine;
-
+using FMODUnity;
 public enum WeightMode
 {
     THIN,
@@ -74,11 +74,11 @@ public class WeightManager : MonoBehaviour
 
         if ((int)mode < (int)this.mode)
         {
-            //TODO: Play losing weight audio clip
+            FMODUnity.RuntimeManager.PlayOneShot("event:/power down", GetComponent<Transform>().position);
         }
         else
         {
-            //TODO: Play gaining weight audio clip
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Power Up", GetComponent<Transform>().position);
         }
 
         this.mode = mode;

@@ -64,6 +64,14 @@ PrefabInstance:
       propertyPath: weightFactor
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 8470973478083220027, guid: 97e2c237ae6a9bf42a8f337ec6beec21, type: 3}
+      propertyPath: collisionAudioClipIds.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8470973478083220027, guid: 97e2c237ae6a9bf42a8f337ec6beec21, type: 3}
+      propertyPath: collisionAudioClipIds.Array.data[0]
+      value: Junk
+      objectReference: {fileID: 0}
     - target: {fileID: 9184545566865385346, guid: 97e2c237ae6a9bf42a8f337ec6beec21, type: 3}
       propertyPath: m_Sprite
       value: 
