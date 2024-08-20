@@ -19,12 +19,12 @@ public class GameManager : MonoBehaviour
     [Header("------- Modifiers -------")]
     public int SlowMotionDurationInMS = 200;
 
-    [SerializeField] private float EndSpwanRate = 40;
+    [SerializeField] private float endSpwanRate = 40;
     [SerializeField][Range(0.01f, 0.2f)] private float amountPerSpawnChangeRate = 0.1f;
     [SerializeField] private float maxAmountPerSpawn = 4;
-    [SerializeField] private float FoodEndSpawnChance = 0.2f;
-    [SerializeField][Range(0, 0.1f)] private float FoodEndSpawnChanceChangeRate = 0.005f;
-    [SerializeField] private float DistanceFromFirstSpawn = 200;
+    [SerializeField] private float foodEndSpawnChance = 0.2f;
+    [SerializeField][Range(0, 0.1f)] private float foodEndSpawnChanceChangeRate = 0.005f;
+    [SerializeField] private float distanceFromFirstSpawn = 200;
 
 
     private void Awake()
@@ -39,17 +39,17 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        Vector3 playerContainerStartingPosition =  Player.transform.parent.transform.position;
+        Vector3 playerContainerStartingPosition = Player.transform.parent.transform.position;
         WeightManager = GetComponent<WeightManager>();
 
-        for (float y = 100; y <= playerContainerStartingPosition.y - DistanceFromFirstSpawn; y += EndSpwanRate + (float)OMath.RandomDouble(-50, 50), EndSpwanRate += EndSpwanRate > 30 ? 1.5f : 0f, FoodEndSpawnChance += FoodEndSpawnChanceChangeRate, maxAmountPerSpawn -= maxAmountPerSpawn - amountPerSpawnChangeRate < 1 ? 0 : amountPerSpawnChangeRate)
+        for (float y = 100; y <= playerContainerStartingPosition.y - distanceFromFirstSpawn; y += endSpwanRate + (float)OMath.RandomDouble(-50, 50), endSpwanRate += endSpwanRate > 30 ? 1.5f : 0f, foodEndSpawnChance += foodEndSpawnChanceChangeRate, maxAmountPerSpawn -= maxAmountPerSpawn - amountPerSpawnChangeRate < 1 ? 0 : amountPerSpawnChangeRate)
         {
-            bool isEnemy = OMath.rnd.NextDouble() >= FoodEndSpawnChance;
+            bool isEnemy = OMath.rnd.NextDouble() >= foodEndSpawnChance;
             var obstacalePool = isEnemy ? enemyPrefabs : foodPrefabs;
 
             Vector3 previousObstaclePosition = Vector3.back;
 
-            for (ushort amount = 1; amount <= OMath.rnd.Next(1,(int)maxAmountPerSpawn); amount++)
+            for (ushort amount = 1; amount <= OMath.rnd.Next(1, (int)maxAmountPerSpawn); amount++)
             {
                 print(maxAmountPerSpawn);
                 Vector3 position = new(OMath.rnd.Next(-17, 17), y, OMath.rnd.Next(-7, 7));
