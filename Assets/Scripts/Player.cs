@@ -47,12 +47,6 @@ public class Player : MonoBehaviour
         {
             playerContainerRB.AddForce(-Physics.gravity);
         }
-
-        /*if player is hurt, enter baloon mode*/
-        if (Mouse.current.rightButton.isPressed && !isHurt)
-        {
-            Hurt();
-        }
     }
 
     private void OnMouseDrag()
