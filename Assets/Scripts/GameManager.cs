@@ -19,9 +19,9 @@ public class GameManager : MonoBehaviour
     [Header("------- Modifiers -------")]
     public int SlowMotionDurationInMS = 200;
 
-    [SerializeField] private float EndSpwanRate = 40;
-    [SerializeField] private float MaxAmountPerSpawn = 4;
-    [SerializeField] private float FoodEndSpawnChance = 0.2f;
+    [SerializeField] private float endSpwanRate = 40;
+    [SerializeField] private float maxAmountPerSpawn = 4;
+    [SerializeField] private float foodEndSpawnChance = 0.2f;
 
     private void Awake()
     {
@@ -37,9 +37,9 @@ public class GameManager : MonoBehaviour
     {
         WeightManager = GetComponent<WeightManager>();
 
-        for (float y = 100; y <= 11500; y += EndSpwanRate + (float)OMath.RandomDouble(-50, 50), EndSpwanRate += EndSpwanRate > 30 ? 1.5f : 0f, FoodEndSpawnChance += 0.005f, MaxAmountPerSpawn -= MaxAmountPerSpawn - 0.1f < 1 ? 0 : 0.1f)
+        for (float y = 100; y <= 11500; y += endSpwanRate + (float)OMath.RandomDouble(-50, 50), endSpwanRate += endSpwanRate > 30 ? 1.5f : 0f, foodEndSpawnChance += 0.005f, maxAmountPerSpawn -= maxAmountPerSpawn - 0.1f < 1 ? 0 : 0.1f)
         {
-            bool isEnemy = OMath.rnd.NextDouble() >= FoodEndSpawnChance;
+            bool isEnemy = OMath.rnd.NextDouble() >= foodEndSpawnChance;
             var obstacalePool = isEnemy ? enemyPrefabs : foodPrefabs;
 
             Vector3 previousObstaclePosition = Vector3.back;
