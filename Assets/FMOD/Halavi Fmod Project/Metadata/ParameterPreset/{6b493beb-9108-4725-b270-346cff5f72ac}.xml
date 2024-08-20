@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{6b493beb-9108-4725-b270-346cff5f72ac}">
+		<property name="name">
+			<value>reachWeightThreshold </value>
+		</property>
+		<relationship name="folder">
+			<destination>{d0cd0f48-5542-461e-a1e0-cd7e09fca18f}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{946fb1f2-7fee-4b13-8703-649d95c37a6b}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{946fb1f2-7fee-4b13-8703-649d95c37a6b}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>5</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
