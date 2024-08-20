@@ -11,6 +11,7 @@ public class Obstacale : MonoBehaviour
     [SerializeField] private short weightFactor;
     [SerializeField] private string[] audioClipIds;
     [SerializeField] private string[] collisionAudioClipIds;
+    [SerializeField][Range(0.1f, 10)] private float slowMotionFollowSpeed = 2;
     private Rigidbody rb;
 
     private bool hasEnteredVision = false;
@@ -54,7 +55,7 @@ public class Obstacale : MonoBehaviour
             rb.useGravity = true;
             rb.velocity = player.GetVelocity() * 0.9f;
 
-            player.FollowSpeed = 100;
+            player.FollowSpeed = slowMotionFollowSpeed;
 
             //TODO: Play Audio based on clipID - One shot obstacale sound
             //FMODUnity.RuntimeManager.PlayOneShot($"event:/${audioClipIds[OMath.rnd.Next(0, audioClipIds.Length)]}", transform.position);
