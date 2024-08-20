@@ -9,8 +9,8 @@ public class Obstacale : MonoBehaviour
     [SerializeField] private bool isEnemy;
     [SerializeField] private bool slowMotion = true;
     [SerializeField] private short weightFactor;
-    [SerializeField] private string audioClipID;
-    [SerializeField] private string collisionAudioClipID;
+    [SerializeField] private string[] audioClipIds;
+    [SerializeField] private string[] collisionAudioClipIds;
     private Rigidbody rb;
 
     private bool hasEnteredVision = false;
@@ -38,7 +38,8 @@ public class Obstacale : MonoBehaviour
         {
             hasEnteredVision = true;
             //TODO: Play Audio based on clipID - Longlasting obstacale sound
-            // FMODUnity.RuntimeManager.PlayOneShot($"event:/${audioClipID}", transform.position);
+            //FMODUnity.RuntimeManager.PlayOneShot($"event:/${audioClipIds[OMath.rnd.Next(0, audioClipIds.Length)]}", transform.position);
+
         }
         else if (
             slowMotion &&
@@ -56,7 +57,7 @@ public class Obstacale : MonoBehaviour
             player.FollowSpeed = 100;
 
             //TODO: Play Audio based on clipID - One shot obstacale sound
-            // FMODUnity.RuntimeManager.PlayOneShot($"event:/${audioClipID}", transform.position);
+            //FMODUnity.RuntimeManager.PlayOneShot($"event:/${audioClipIds[OMath.rnd.Next(0, audioClipIds.Length)]}", transform.position);
 
             await Task.Delay(GameManager.Instance.SlowMotionDurationInMS);
 
@@ -77,7 +78,7 @@ public class Obstacale : MonoBehaviour
             hasCollided = true;
 
             //TODO: Play Audio based on clipID - Collision
-            // FMODUnity.RuntimeManager.PlayOneShot($"event:/${collisionAudioClipID}", transform.position);
+            //FMODUnity.RuntimeManager.PlayOneShot($"event:/${collisionAudioClipIds[OMath.rnd.Next(0, collisionAudioClipIds.Length)]}", transform.position);
 
             GameManager.Instance.WeightManager.Weight += weightFactor;
 
