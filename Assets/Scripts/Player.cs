@@ -103,4 +103,22 @@ public class Player : MonoBehaviour
             });
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        var weightManager = GameManager.Instance.WeightManager;
+
+        if (other.name.Equals("Pit"))
+        {
+            print("touch");
+            if (weightManager.Weight >= weightManager.WeightThreshold)
+            {
+                GameManager.Instance.Win();
+            }
+            else
+            {
+                GameManager.Instance.Lose();
+            }
+        }
+    }
 }
