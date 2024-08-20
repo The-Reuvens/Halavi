@@ -1,5 +1,4 @@
 
-using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -27,13 +26,10 @@ public class GameoverManager : MonoBehaviour
 
     public void Quit()
     {
-        print("fuck");
-        /*
         blackBackground.LeanAlpha(1, 2).setOnComplete(() =>
         {
             SceneManager.LoadScene((int)Scene.MENU);
         });
-        */
     }
 
     public void TryAgain()
