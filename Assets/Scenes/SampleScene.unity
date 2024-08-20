@@ -509,7 +509,7 @@ GameObject:
   m_Component:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
-  - component: {fileID: 963194226}
+  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -517,14 +517,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &963194226
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
 --- !u!20 &963194227
 Camera:
   m_ObjectHideFlags: 0
@@ -591,6 +583,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1925212343}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &963194229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 1071106194}
 --- !u!1 &1071106194
 GameObject:
   m_ObjectHideFlags: 0
@@ -718,6 +723,7 @@ MonoBehaviour:
   playerContainerRB: {fileID: 1925212344}
   PlayerClone: {fileID: 430197416}
   hurtModeCooldownRangeInSec: {x: 0.7, y: 1}
+  minHurtBounceDistance: 5
 --- !u!54 &1071106199
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -883,6 +889,10 @@ GameObject:
   - component: {fileID: 1394340485}
   - component: {fileID: 1394340486}
   - component: {fileID: 1394340484}
+  - component: {fileID: 1394340487}
+  - component: {fileID: 1394340488}
+  - component: {fileID: 1394340489}
+  - component: {fileID: 1394340490}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -947,12 +957,118 @@ MonoBehaviour:
   - {fileID: 6668752884375012413, guid: 30ad1426792c859fead5e536f85178df, type: 3}
   BloodParticles: {fileID: 5517175297438828873, guid: 4138cc9cacba563de8360dfc6e9d8744, type: 3}
   SlowMotionDurationInMS: 300
-  EndSpwanRate: 73
+  endSpwanRate: 40
   amountPerSpawnChangeRate: 0.1
   maxAmountPerSpawn: 4
-  FoodEndSpawnChance: 0.2
-  FoodEndSpawnChanceChangeRate: 0.005
-  DistanceFromFirstSpawn: 100
+  foodEndSpawnChance: 0.2
+  foodEndSpawnChanceChangeRate: 0.005
+  distanceFromFirstSpawn: 200
+--- !u!114 &1394340487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394340483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1846611994
+      Data2: 1135412181
+      Data3: 1862893210
+      Data4: 1689983769
+    Path: event:/In Game Music
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1394340488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394340483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 2093024478
+      Data2: 1192800804
+      Data3: 357278136
+      Data4: -1905565177
+    Path: event:/Wind
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params:
+  - Name: speed
+    Value: 1
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1394340489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394340483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Emitters:
+  - Target: {fileID: 1394340488}
+    Params: []
+  - Target: {fileID: 1394340487}
+    Params:
+    - Name: 'reachWeightThreshold '
+      Value: 2
+  TriggerEvent: 1
+--- !u!114 &1394340490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394340483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Emitters:
+  - Target: {fileID: 1394340488}
+    Params: []
+  - Target: {fileID: 1394340487}
+    Params:
+    - Name: 'reachWeightThreshold '
+      Value: 0
+  TriggerEvent: 2
 --- !u!1 &1731480620
 GameObject:
   m_ObjectHideFlags: 0
@@ -6021,4 +6137,3 @@ SceneRoots:
   - {fileID: 1194398664}
   - {fileID: 1925212343}
   - {fileID: 2080610531}
-  - {fileID: 726191079}

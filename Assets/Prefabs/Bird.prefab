@@ -124,8 +124,11 @@ MonoBehaviour:
   isEnemy: 1
   slowMotion: 1
   weightFactor: -20
-  audioClipID: 
-  collisionAudioClipID: 
+  audioClipIds:
+  - bird
+  collisionAudioClipIds:
+  - Hit by a bird
+  slowMotionFollowSpeed: 2
 --- !u!65 &5624879086568178070
 BoxCollider:
   m_ObjectHideFlags: 0
