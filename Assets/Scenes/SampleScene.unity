@@ -717,6 +717,7 @@ MonoBehaviour:
   maxVelocityY: -120
   playerContainerRB: {fileID: 1925212344}
   PlayerClone: {fileID: 430197416}
+  hurtModeCooldownRangeInSec: {x: 0.7, y: 1}
 --- !u!54 &1071106199
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6020,3 +6021,4 @@ SceneRoots:
   - {fileID: 1194398664}
   - {fileID: 1925212343}
   - {fileID: 2080610531}
+  - {fileID: 726191079}
