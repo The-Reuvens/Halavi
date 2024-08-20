@@ -10,9 +10,10 @@ public class Player : MonoBehaviour
 {
     private bool isDragging = false;
     public float FollowSpeed = 13;
-    private readonly float startingVelocityY = -100;
-    private float maxVelocityY = -120;
+    [SerializeField] private float startingVelocityY = -100;
+    [SerializeField] private float maxVelocityY = -120;
     [SerializeField][NotNull] private Rigidbody playerContainerRB;
+    public GameObject PlayerClone;
     public Animator Animator { get; private set; }
 
     // Hurt Mode
@@ -29,6 +30,7 @@ public class Player : MonoBehaviour
     {
         Animator = GetComponent<Animator>();
         playerContainerRB.velocity = new Vector3(0, startingVelocityY, 0);
+        LeanTween.alpha(PlayerClone, 0, 0);
     }
 
     void FixedUpdate()
@@ -64,6 +66,8 @@ public class Player : MonoBehaviour
             lockDrag = false;
         }
     }
+
+    public Vector3 GetVelocity() => playerContainerRB.velocity;
 
     public void Hurt()
     {

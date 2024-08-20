@@ -1,7 +1,6 @@
 using System;
 using TMPro;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public enum WeightMode
 {
@@ -45,7 +44,7 @@ public class WeightManager : MonoBehaviour
             var player = GameManager.Instance.Player;
             float weightPercentage = weight / WeightThreshold;
 
-            player.transform.LeanScale((1 + weightPercentage) * Vector3.one, 0.4f).setEaseInOutBounce();
+            player.transform.LeanScale((1 + 0.5f * weightPercentage) * Vector3.one, 0.4f).setEaseInOutBounce();
 
             SetMode(value switch
             {
@@ -54,6 +53,16 @@ public class WeightManager : MonoBehaviour
                 float v when mode == WeightMode.FAT && v >= WeightThreshold / 3 * 2 && v < WeightThreshold => WeightMode.FATSO,
                 _ => WeightMode.NULL
             });
+
+            if (weightSetType == WeightSetType.GAIN)
+            {
+                var playerClone = player.PlayerClone;
+
+                playerClone.transform.localPosition = player.transform.localPosition;
+                playerClone.LeanScale(2f * Vector3.one, 1f).setEaseOutExpo();
+                LeanTween.alpha(playerClone, 0, 1f).setEaseOutExpo();
+
+            }
         }
     }
 
@@ -62,7 +71,6 @@ public class WeightManager : MonoBehaviour
     private void SetMode(WeightMode mode)
     {
         if (mode == WeightMode.NULL) return;
-        print(Enum.GetName(typeof(WeightMode), this.mode));
 
         if ((int)mode < (int)this.mode)
         {
