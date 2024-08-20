@@ -1,7 +1,5 @@
-using System;
 using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(Animator))]
@@ -71,34 +69,39 @@ public class Player : MonoBehaviour
 
     public void Hurt()
     {
-        isHurt = true;
-        isDragging = false;
-        lockDrag = true;
-
-        //TODO: Change animator/sprite of player
-
-        float duration = Random.Range(hurtModeCooldownRangeInSec.x, hurtModeCooldownRangeInSec.y);
-
-        Vector3 newPosition = new(
-            Random.Range(BorderXRange[0], BorderXRange[1]),
-            Random.Range(BorderYRange[0], BorderYRange[1]),
-            transform.localPosition.z
-        );
-
-        while (Vector3.Distance(newPosition, transform.localPosition) < minHurtBounceDistance)
+        //TODO: if the player is in baloon mode, make him invulnrable to hits until he is back to normal
+        if (isHurt == false)
         {
-            newPosition = new(
+            isHurt = true;
+            isDragging = false;
+            lockDrag = true;
+
+            //TODO: add player hurt sounds
+            //TODO: Change animator/sprite of player
+
+            float duration = Random.Range(hurtModeCooldownRangeInSec.x, hurtModeCooldownRangeInSec.y);
+
+            Vector3 newPosition = new(
                 Random.Range(BorderXRange[0], BorderXRange[1]),
                 Random.Range(BorderYRange[0], BorderYRange[1]),
                 transform.localPosition.z
             );
-        }
 
-        transform.LeanMoveLocal(newPosition, duration).setEaseOutCirc().setOnComplete(() =>
-        {
-            isHurt = false;
-            //TODO: Change back animator/sprite of player
-        });
+            while (Vector3.Distance(newPosition, transform.localPosition) < minHurtBounceDistance)
+            {
+                newPosition = new(
+                    Random.Range(BorderXRange[0], BorderXRange[1]),
+                    Random.Range(BorderYRange[0], BorderYRange[1]),
+                    transform.localPosition.z
+                );
+            }
+
+            transform.LeanMoveLocal(newPosition, duration).setEaseOutCirc().setOnComplete(() =>
+            {
+                isHurt = false;
+                //TODO: Change back animator/sprite of player
+            });
+        }
     }
 
     private void OnTriggerEnter(Collider other)

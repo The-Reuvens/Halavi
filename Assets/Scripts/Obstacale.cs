@@ -6,6 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider))]
 public class Obstacale : MonoBehaviour
 {
+
     [SerializeField] private bool isEnemy;
     [SerializeField] private bool slowMotion = true;
     [SerializeField] private short weightFactor;
@@ -18,6 +19,7 @@ public class Obstacale : MonoBehaviour
     private bool hasSlowMotioned = false;
     private readonly float Buffer = 5;
     private bool hasCollided;
+
 
     private void Start()
     {
@@ -74,6 +76,7 @@ public class Obstacale : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        var player = GameManager.Instance.Player;
         if (other.name.Equals("Player"))
         {
             hasCollided = true;
@@ -82,6 +85,11 @@ public class Obstacale : MonoBehaviour
             //FMODUnity.RuntimeManager.PlayOneShot($"event:/${collisionAudioClipIds[OMath.rnd.Next(0, collisionAudioClipIds.Length)]}", transform.position);
 
             GameManager.Instance.WeightManager.Weight += weightFactor;
+
+            if(tag == "Obstacle")
+            {
+                player.Hurt();
+            }
 
             if (name.StartsWith("Bird"))
             {
@@ -93,6 +101,7 @@ public class Obstacale : MonoBehaviour
                 rb.velocity = GameManager.Instance.Player.GetVelocity() * 1.3f;
                 LeanTween.alpha(gameObject, 0, 0.2f).delay = 1f;
                 LeanTween.alpha(bloodParticles, 0, 0.2f).delay = 1f;
+                GetComponent<Collider>().enabled = false;
             }
             else
             {
