@@ -71,6 +71,8 @@ public class Player : MonoBehaviour
 
     public void Hurt()
     {
+        //TODO: if the player is in baloon mode, make him invulnrable to hits until he is back to normal
+        //BUG: sometimes after getting hurt by a bird, the player moves to a random location and then teleports somewhere else
         isHurt = true;
         isDragging = false;
         lockDrag = true;
