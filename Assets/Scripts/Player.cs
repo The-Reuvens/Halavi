@@ -51,7 +51,7 @@ public class Player : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        if (!lockDrag)
+        if (!lockDrag && !isHurt)
         {
             isDragging = true;
         }
@@ -59,12 +59,9 @@ public class Player : MonoBehaviour
     private void OnMouseUp()
     {
         isDragging = false;
-        if (lockDrag && !isHurt)
+        if (lockDrag)
         {
             lockDrag = false;
-
-            // Stop tween midway
-            LeanTween.cancel(gameObject);
         }
     }
 
