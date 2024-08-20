@@ -159,6 +159,9 @@
 		<property name="length">
 			<value>46.451632653061225</value>
 		</property>
+		<property name="volume">
+			<value>3</value>
+		</property>
 		<relationship name="audioFile">
 			<destination>{d35434a9-aff0-4745-9a59-68e3fb484056}</destination>
 		</relationship>
@@ -499,7 +502,7 @@
 			<value>30.967755102040826</value>
 		</property>
 		<property name="quantizationInterval">
-			<value>8</value>
+			<value>1</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{5df35671-e822-463f-91e1-7af9a0f65abf}</destination>
