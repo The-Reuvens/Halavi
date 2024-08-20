@@ -1,5 +1,7 @@
 using System;
+using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(WeightManager))]
 public class GameManager : MonoBehaviour
@@ -15,6 +17,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject[] foodPrefabs;
     [SerializeField] private GameObject[] enemyPrefabs;
     public GameObject BloodParticles;
+    [Header("------- UI -------")]
+    [SerializeField] private CanvasGroup blackScreen;
 
     [Header("------- Modifiers -------")]
     public int SlowMotionDurationInMS = 200;
@@ -71,4 +75,36 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+
+    public async void Win()
+    {
+        blackScreen.alpha = 1;
+
+        //TODO: Play win sound and set length
+        int soundLengthInMS = 0;
+
+        await Task.Delay(soundLengthInMS);
+
+        SceneManager.LoadScene((int)Scene.WIN);
+    }
+
+    public async void Lose()
+    {
+        blackScreen.alpha = 1;
+
+        //TODO: Play death sound and set length
+        int soundLengthInMS = 0;
+
+        await Task.Delay(soundLengthInMS);
+
+        SceneManager.LoadScene((int)Scene.GAMEOVER);
+    }
+}
+
+enum Scene
+{
+    MENU,
+    GAME,
+    GAMEOVER,
+    WIN
 }

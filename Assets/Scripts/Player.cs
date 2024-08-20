@@ -100,4 +100,22 @@ public class Player : MonoBehaviour
             //TODO: Change back animator/sprite of player
         });
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        var weightManager = GameManager.Instance.WeightManager;
+
+        if (other.name.Equals("Pit"))
+        {
+            print("touch");
+            if (weightManager.Weight >= weightManager.WeightThreshold)
+            {
+                GameManager.Instance.Win();
+            }
+            else
+            {
+                GameManager.Instance.Lose();
+            }
+        }
+    }
 }
