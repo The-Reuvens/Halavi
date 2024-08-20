@@ -947,8 +947,11 @@ MonoBehaviour:
   BloodParticles: {fileID: 5517175297438828873, guid: 4138cc9cacba563de8360dfc6e9d8744, type: 3}
   SlowMotionDurationInMS: 300
   EndSpwanRate: 73
-  MaxAmountPerSpawn: 4
-  FoodEndSpawnChance: 0.22
+  amountPerSpawnChangeRate: 0.1
+  maxAmountPerSpawn: 4
+  FoodEndSpawnChance: 0.2
+  FoodEndSpawnChanceChangeRate: 0.005
+  DistanceFromFirstSpawn: 100
 --- !u!1 &1731480620
 GameObject:
   m_ObjectHideFlags: 0
