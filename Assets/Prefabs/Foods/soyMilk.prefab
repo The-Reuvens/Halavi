@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7869637872748882156, guid: 97e2c237ae6a9bf42a8f337ec6beec21, type: 3}
+      propertyPath: m_TagString
+      value: Food
+      objectReference: {fileID: 0}
     - target: {fileID: 8470973478083220027, guid: 97e2c237ae6a9bf42a8f337ec6beec21, type: 3}
       propertyPath: weightFactor
       value: 2

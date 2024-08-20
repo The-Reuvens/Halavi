@@ -17,8 +17,7 @@ enum WeightSetType
 
 public class WeightManager : MonoBehaviour
 {
-
-    private readonly float WeightThreshold = 300;
+    public float WeightThreshold = 300;
     private WeightMode mode = WeightMode.THIN;
     [SerializeField] private TMP_Text weightText;
 
