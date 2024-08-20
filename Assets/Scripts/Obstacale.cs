@@ -6,7 +6,6 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider))]
 public class Obstacale : MonoBehaviour
 {
-    private Player Player = GameManager.Instance.Player;
 
     [SerializeField] private bool isEnemy;
     [SerializeField] private bool slowMotion = true;
@@ -77,6 +76,7 @@ public class Obstacale : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        var player = GameManager.Instance.Player;
         if (other.name.Equals("Player"))
         {
             hasCollided = true;
@@ -88,8 +88,7 @@ public class Obstacale : MonoBehaviour
 
             if(tag == "Obstacle")
             {
-                Player.Hurt();
-                print("obastacle");
+                player.Hurt();
             }
 
             if (name.StartsWith("Bird"))
