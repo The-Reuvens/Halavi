@@ -1,5 +1,6 @@
 using System;
 using System.Threading.Tasks;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -19,6 +20,7 @@ public class GameManager : MonoBehaviour
     public GameObject BloodParticles;
     [Header("------- UI -------")]
     [SerializeField] private CanvasGroup blackScreen;
+    [SerializeField] private TMP_Text counter;
 
     [Header("------- Modifiers -------")]
     public int SlowMotionDurationInMS = 200;
@@ -41,8 +43,24 @@ public class GameManager : MonoBehaviour
         else Instance = this;
     }
 
-    private void Start()
+    private async void Start()
     {
+        await Task.Delay(1000);
+
+        for (int i = 2; i >= 0; i--)
+        {
+            //TODO: Play counter audio
+            counter.SetText($"{i}");
+            await Task.Delay(1000);
+        }
+
+        blackScreen.alpha = 0;
+        Destroy(counter);
+
+        var playerContainerRb = Player.transform.parent.GetComponent<Rigidbody>();
+        playerContainerRb.useGravity = true;
+        playerContainerRb.isKinematic = false;
+
         Vector3 playerContainerStartingPosition = Player.transform.parent.transform.position;
         WeightManager = GetComponent<WeightManager>();
 
