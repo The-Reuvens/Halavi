@@ -1,5 +1,391 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< Updated upstream
+--- !u!114 &-8731758267746976467
+=======
+--- !u!114 &-7428808314852142789
+>>>>>>> Stashed changes
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< Updated upstream
+  m_Name: event:/Drinking
+  m_EditorClassIdentifier: 
+  Path: event:/Drinking
+  Guid:
+    Data1: -65445313
+    Data2: 1295625164
+    Data3: 363934109
+    Data4: 676494459
+=======
+  m_Name: event:/Hit by a bird
+  m_EditorClassIdentifier: 
+  Path: event:/Hit by a bird
+  Guid:
+    Data1: -1003582674
+    Data2: 1125709945
+    Data3: 1443456443
+    Data4: 383240931
+>>>>>>> Stashed changes
+  Banks:
+  - {fileID: 8952147343088746440}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+<<<<<<< Updated upstream
+--- !u!114 &-8556253590681863698
+=======
+--- !u!114 &-6912321977772179058
+>>>>>>> Stashed changes
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< Updated upstream
+  m_Name: event:/Fire Ball
+  m_EditorClassIdentifier: 
+  Path: event:/Fire Ball
+  Guid:
+    Data1: 242939649
+    Data2: 1255265566
+    Data3: 882763166
+    Data4: -2088756649
+=======
+  m_Name: event:/power down
+  m_EditorClassIdentifier: 
+  Path: event:/power down
+  Guid:
+    Data1: 580492225
+    Data2: 1126695138
+    Data3: 1499969199
+    Data4: 2063128399
+>>>>>>> Stashed changes
+  Banks:
+  - {fileID: 8952147343088746440}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+<<<<<<< Updated upstream
+--- !u!114 &-7218238763854730131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/balloonMode
+  m_EditorClassIdentifier: 
+  Name: balloonMode
+  StudioPath: parameter:/balloonMode
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3853971823
+    data2: 1331932525
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-4974357359184201229
+=======
+--- !u!114 &-3922514673769343404
+>>>>>>> Stashed changes
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/bird
+  m_EditorClassIdentifier: 
+  Path: event:/bird
+  Guid:
+    Data1: 941486462
+    Data2: 1256051865
+    Data3: -614071875
+    Data4: 1841957080
+  Banks:
+  - {fileID: 8952147343088746440}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+<<<<<<< Updated upstream
+--- !u!114 &-4686543246497460355
+=======
+--- !u!114 &-3717449560012157038
+>>>>>>> Stashed changes
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+<<<<<<< Updated upstream
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/Halavi Fmod Project/Build/Desktop/Music.bank
+  Name: Music
+  StudioPath: bank:/Music
+  lastModified: 638597527955080109
+  FileSizes:
+  - Name: Desktop
+    Value: 4116448
+  Exists: 1
+=======
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Fire Ball
+  m_EditorClassIdentifier: 
+  Path: event:/Fire Ball
+  Guid:
+    Data1: 242939649
+    Data2: 1255265566
+    Data3: 882763166
+    Data4: -2088756649
+  Banks:
+  - {fileID: 8952147343088746440}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3463738022183970005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Wind
+  m_EditorClassIdentifier: 
+  Path: event:/Wind
+  Guid:
+    Data1: 2093024478
+    Data2: 1192800804
+    Data3: 357278136
+    Data4: -1905565177
+  Banks:
+  - {fileID: 8952147343088746440}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -1978897585868606745}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 102500
+>>>>>>> Stashed changes
+--- !u!114 &-2667995837318786311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/In Game Music
+  m_EditorClassIdentifier: 
+  Path: event:/In Game Music
+  Guid:
+    Data1: 1846611994
+    Data2: 1135412181
+    Data3: 1862893210
+    Data4: 1689983769
+  Banks:
+<<<<<<< Updated upstream
+  - {fileID: -4686543246497460355}
+=======
+  - {fileID: 3664058118763892912}
+>>>>>>> Stashed changes
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 9062242245895023709}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 322967
+<<<<<<< Updated upstream
+--- !u!114 &-2023799375201322764
+=======
+--- !u!114 &-1978897585868606745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Wind/speed
+  m_EditorClassIdentifier: 
+  Name: speed
+  StudioPath: 
+  Min: 1
+  Max: 2
+  Default: 1
+  ID:
+    data1: 4266238119
+    data2: 3647389559
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-787234182019861287
+>>>>>>> Stashed changes
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< Updated upstream
+  m_Name: event:/Junk
+  m_EditorClassIdentifier: 
+  Path: event:/Junk
+=======
+  m_Name: event:/Drinking
+  m_EditorClassIdentifier: 
+  Path: event:/Drinking
+  Guid:
+    Data1: -65445313
+    Data2: 1295625164
+    Data3: 363934109
+    Data4: 676494459
+  Banks:
+  - {fileID: 8952147343088746440}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-267983061572831166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/power Up
+  m_EditorClassIdentifier: 
+  Path: event:/power Up
+>>>>>>> Stashed changes
+  Guid:
+    Data1: 1768054666
+    Data2: 1221394893
+    Data3: 2099402395
+    Data4: -1688958687
+  Banks:
+  - {fileID: 8952147343088746440}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1015882644441065043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Static fire ball
+  m_EditorClassIdentifier: 
+  Path: event:/Static fire ball
+  Guid:
+    Data1: -2051744528
+    Data2: 1151638537
+    Data3: 1205727878
+    Data4: 691440287
+  Banks:
+  - {fileID: 8952147343088746440}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 26933
+--- !u!114 &-184025884827672383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Salad
+  m_EditorClassIdentifier: 
+  Path: event:/Salad
+  Guid:
+    Data1: -1800502865
+    Data2: 1241413830
+    Data3: 204278699
+    Data4: 1818053155
+  Banks:
+  - {fileID: 8952147343088746440}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,14 +401,325 @@ MonoBehaviour:
   EditorBanks:
   - {fileID: 8291732082946153315}
   - {fileID: 8952147343088746440}
-  EditorEvents: []
-  EditorParameters: []
+<<<<<<< Updated upstream
+  - {fileID: -4686543246497460355}
+  EditorEvents:
+  - {fileID: -2667995837318786311}
+  - {fileID: 7350741507581406273}
+  - {fileID: -8556253590681863698}
+  - {fileID: 7434277195593975433}
+  - {fileID: -8731758267746976467}
+  - {fileID: -4974357359184201229}
+  - {fileID: -2023799375201322764}
+  - {fileID: -184025884827672383}
+  - {fileID: 7052705660510138553}
+  - {fileID: 5776660398786456635}
+  - {fileID: 7414227810523415845}
+  - {fileID: -1015882644441065043}
+  - {fileID: 4561485002400573487}
+  EditorParameters:
+  - {fileID: -7218238763854730131}
+=======
+  - {fileID: 3664058118763892912}
+  EditorEvents:
+  - {fileID: -2667995837318786311}
+  - {fileID: 7350741507581406273}
+  - {fileID: -3717449560012157038}
+  - {fileID: -7428808314852142789}
+  - {fileID: -787234182019861287}
+  - {fileID: -3922514673769343404}
+  - {fileID: 4929488449661941706}
+  - {fileID: 9220451103475073159}
+  - {fileID: -6912321977772179058}
+  - {fileID: -267983061572831166}
+  - {fileID: -3463738022183970005}
+  - {fileID: 4341766321557453699}
+  - {fileID: 8041894216630377140}
+  EditorParameters:
+  - {fileID: 764196484516263618}
+>>>>>>> Stashed changes
   MasterBanks:
   - {fileID: 8952147343088746440}
   StringsBanks:
   - {fileID: 8291732082946153315}
-  cacheTime: 638594847349819371
+  cacheTime: 638597527955080109
   cacheVersion: 131619
+<<<<<<< Updated upstream
+--- !u!114 &4561485002400573487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Fish
+  m_EditorClassIdentifier: 
+  Path: event:/Fish
+  Guid:
+    Data1: 43853817
+    Data2: 1206504114
+    Data3: -1134868088
+    Data4: 1239041968
+  Banks:
+  - {fileID: 8952147343088746440}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4996895678686323676
+=======
+--- !u!114 &764196484516263618
+>>>>>>> Stashed changes
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+<<<<<<< Updated upstream
+  m_Name: parameter:/Wind/speed
+  m_EditorClassIdentifier: 
+  Name: speed
+  StudioPath: 
+  Min: 1
+  Max: 2
+  Default: 1
+  ID:
+    data1: 4266238119
+    data2: 3647389559
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &5776660398786456635
+=======
+  m_Name: parameter:/balloonMode
+  m_EditorClassIdentifier: 
+  Name: balloonMode
+  StudioPath: parameter:/balloonMode
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3853971823
+    data2: 1331932525
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &3664058118763892912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/Halavi Fmod Project/Build/Desktop/Music.bank
+  Name: Music
+  StudioPath: bank:/Music
+  lastModified: 638597527955080109
+  FileSizes:
+  - Name: Desktop
+    Value: 4116448
+  Exists: 1
+--- !u!114 &4341766321557453699
+>>>>>>> Stashed changes
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< Updated upstream
+  m_Name: event:/power Up
+  m_EditorClassIdentifier: 
+  Path: event:/power Up
+  Guid:
+    Data1: -1169771044
+    Data2: 1299777294
+    Data3: -1772190546
+    Data4: -2101923218
+  Banks:
+  - {fileID: 8952147343088746440}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &7052705660510138553
+=======
+  m_Name: event:/Static fire ball
+  m_EditorClassIdentifier: 
+  Path: event:/Static fire ball
+  Guid:
+    Data1: -2051744528
+    Data2: 1151638537
+    Data3: 1205727878
+    Data4: 691440287
+  Banks:
+  - {fileID: 8952147343088746440}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 26933
+--- !u!114 &4929488449661941706
+>>>>>>> Stashed changes
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< Updated upstream
+  m_Name: event:/power down
+  m_EditorClassIdentifier: 
+  Path: event:/power down
+  Guid:
+    Data1: 580492225
+    Data2: 1126695138
+    Data3: 1499969199
+    Data4: 2063128399
+=======
+  m_Name: event:/Junk
+  m_EditorClassIdentifier: 
+  Path: event:/Junk
+  Guid:
+    Data1: 1768054666
+    Data2: 1221394893
+    Data3: 2099402395
+    Data4: -1688958687
+>>>>>>> Stashed changes
+  Banks:
+  - {fileID: 8952147343088746440}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &7350741507581406273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Eating Chicken
+  m_EditorClassIdentifier: 
+  Path: event:/Eating Chicken
+  Guid:
+    Data1: 632057701
+    Data2: 1108449523
+    Data3: 2146780062
+    Data4: 1847921667
+  Banks:
+  - {fileID: 8952147343088746440}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+<<<<<<< Updated upstream
+--- !u!114 &7414227810523415845
+=======
+--- !u!114 &8041894216630377140
+>>>>>>> Stashed changes
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< Updated upstream
+  m_Name: event:/Wind
+  m_EditorClassIdentifier: 
+  Path: event:/Wind
+  Guid:
+    Data1: 2093024478
+    Data2: 1192800804
+    Data3: 357278136
+    Data4: -1905565177
+  Banks:
+  - {fileID: 8952147343088746440}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 4996895678686323676}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 102500
+--- !u!114 &7434277195593975433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Hit by a bird
+  m_EditorClassIdentifier: 
+  Path: event:/Hit by a bird
+  Guid:
+    Data1: -1003582674
+    Data2: 1125709945
+    Data3: 1443456443
+    Data4: 383240931
+=======
+  m_Name: event:/Fish
+  m_EditorClassIdentifier: 
+  Path: event:/Fish
+  Guid:
+    Data1: 43853817
+    Data2: 1206504114
+    Data3: -1134868088
+    Data4: 1239041968
+>>>>>>> Stashed changes
+  Banks:
+  - {fileID: 8952147343088746440}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &8291732082946153315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37,11 +734,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/FMOD/Halavi Fmod Project/Build/Desktop/Master.strings.bank
   Name: Master.strings
-  StudioPath: bank:/Banks/Master.strings
-  lastModified: 638594847349819371
+  StudioPath: bank:/Master.strings
+  lastModified: 638597201054883171
   FileSizes:
   - Name: Desktop
-    Value: 718
+    Value: 1732
   Exists: 1
 --- !u!114 &8952147343088746440
 MonoBehaviour:
@@ -57,9 +754,60 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/FMOD/Halavi Fmod Project/Build/Desktop/Master.bank
   Name: Master
-  StudioPath: bank:/Banks/Master
-  lastModified: 638594847349809391
+  StudioPath: bank:/Master
+  lastModified: 638597201054862145
   FileSizes:
   - Name: Desktop
-    Value: 1036
+    Value: 2265472
   Exists: 1
+--- !u!114 &9062242245895023709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 'parameter:/In Game Music/reachWeightThreshold '
+  m_EditorClassIdentifier: 
+  Name: 'reachWeightThreshold '
+  StudioPath: 
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 1691546399
+    data2: 1286871828
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &9220451103475073159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Salad
+  m_EditorClassIdentifier: 
+  Path: event:/Salad
+  Guid:
+    Data1: -1800502865
+    Data2: 1241413830
+    Data3: 204278699
+    Data4: 1818053155
+  Banks:
+  - {fileID: 8952147343088746440}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
