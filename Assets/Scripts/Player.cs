@@ -62,8 +62,9 @@ public class Player : MonoBehaviour
             isDragging = true;
         }
     }
-    private void OnMouseOver()
+    private void OnMouseUp()
     {
+        isDragging = false;
         if (lockDrag && !isHurt)
         {
             lockDrag = false;
@@ -72,7 +73,6 @@ public class Player : MonoBehaviour
             LeanTween.cancel(gameObject);
         }
     }
-    private void OnMouseUp() => isDragging = false;
 
     public void Hurt()
     {
