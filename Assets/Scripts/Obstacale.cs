@@ -102,6 +102,7 @@ public class Obstacale : MonoBehaviour
                 rb.velocity = GameManager.Instance.Player.GetVelocity() * 1.3f;
                 LeanTween.alpha(gameObject, 0, 0.2f).delay = 1f;
                 LeanTween.alpha(bloodParticles, 0, 0.2f).delay = 1f;
+                GetComponent<Collider>().enabled = false;
             }
             else
             {
