@@ -100,11 +100,3 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene((int)Scene.GAMEOVER);
     }
 }
-
-enum Scene
-{
-    MENU,
-    GAME,
-    GAMEOVER,
-    WIN
-}
