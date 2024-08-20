@@ -1822,10 +1822,8 @@ GameObject:
   - component: {fileID: 1394340485}
   - component: {fileID: 1394340486}
   - component: {fileID: 1394340484}
-  - component: {fileID: 1394340487}
   - component: {fileID: 1394340488}
-  - component: {fileID: 1394340489}
-  - component: {fileID: 1394340490}
+  - component: {fileID: 1394340487}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1899,6 +1897,58 @@ MonoBehaviour:
   foodEndSpawnChance: 0.2
   foodEndSpawnChanceChangeRate: 0.005
   distanceFromFirstSpawn: 200
+--- !u!114 &1394340487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394340483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Emitters:
+  - Target: {fileID: 0}
+    Params:
+    - Name: 'reachWeightThreshold '
+      Value: 2
+  - Target: {fileID: 1394340488}
+    Params: []
+  TriggerEvent: 1
+--- !u!114 &1394340488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394340483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 2093024478
+      Data2: 1192800804
+      Data3: 357278136
+      Data4: -1905565177
+    Path: event:/Wind
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1427870757
 GameObject:
   m_ObjectHideFlags: 0

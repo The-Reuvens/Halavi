@@ -289,6 +289,7 @@ GameObject:
   m_Component:
   - component: {fileID: 655230659}
   - component: {fileID: 655230660}
+  - component: {fileID: 655230661}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -324,6 +325,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blackBackground: {fileID: 615857589}
+--- !u!114 &655230661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655230657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1846611994
+      Data2: 1135412181
+      Data3: 1862893210
+      Data4: 1689983769
+    Path: event:/In Game Music
+  Event: 
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params:
+  - Name: 'reachWeightThreshold '
+    Value: 0
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &793094543
 GameObject:
   m_ObjectHideFlags: 0
@@ -840,7 +874,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1668674242}
   - component: {fileID: 1668674241}
-  - component: {fileID: 1668674240}
   - component: {fileID: 1668674239}
   - component: {fileID: 1668674238}
   m_Layer: 5
@@ -927,14 +960,6 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
---- !u!81 &1668674240
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1668674237}
-  m_Enabled: 1
 --- !u!20 &1668674241
 Camera:
   m_ObjectHideFlags: 0
