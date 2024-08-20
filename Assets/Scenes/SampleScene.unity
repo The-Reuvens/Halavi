@@ -718,6 +718,7 @@ MonoBehaviour:
   playerContainerRB: {fileID: 1925212344}
   PlayerClone: {fileID: 430197416}
   hurtModeCooldownRangeInSec: {x: 0.7, y: 1}
+  minHurtBounceDistance: 5
 --- !u!54 &1071106199
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -947,12 +948,12 @@ MonoBehaviour:
   - {fileID: 6668752884375012413, guid: 30ad1426792c859fead5e536f85178df, type: 3}
   BloodParticles: {fileID: 5517175297438828873, guid: 4138cc9cacba563de8360dfc6e9d8744, type: 3}
   SlowMotionDurationInMS: 300
-  EndSpwanRate: 73
-  amountPerSpawnChangeRate: 0.1
+  endSpwanRate: 40
+  amountPerSpawnChangeRate: 0.2
   maxAmountPerSpawn: 4
-  FoodEndSpawnChance: 0.2
-  FoodEndSpawnChanceChangeRate: 0.005
-  DistanceFromFirstSpawn: 100
+  foodEndSpawnChance: 0.2
+  foodEndSpawnChanceChangeRate: 0.005
+  distanceFromFirstSpawn: 200
 --- !u!1 &1731480620
 GameObject:
   m_ObjectHideFlags: 0
@@ -6021,4 +6022,3 @@ SceneRoots:
   - {fileID: 1194398664}
   - {fileID: 1925212343}
   - {fileID: 2080610531}
-  - {fileID: 726191079}
