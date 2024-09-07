@@ -101,6 +101,29 @@ public class Player : MonoBehaviour
                 isHurt = false;
                 //TODO: Change back animator/sprite of player
             });
+
+            // Camera effects
+            LeanTween.value(0, 0.65f, duration * 0.3f).setOnUpdate((float value) =>
+            {
+                PPManager.Instance.ChromaticAberration.intensity.value = value;
+            }).setOnComplete(() =>
+            {
+                LeanTween.value(0.65f, 0, duration * 0.4f).setOnUpdate((float value) =>
+                {
+                    PPManager.Instance.ChromaticAberration.intensity.value = value;
+                }).delay = 0.4f;
+            });
+
+            LeanTween.value(100, 200, duration * 0.3f).setOnUpdate((float value) =>
+            {
+                PPManager.Instance.ColorGrading.mixerRedOutRedIn.value = value;
+            }).setOnComplete(() =>
+            {
+                LeanTween.value(200, 100, duration * 0.4f).setOnUpdate((float value) =>
+                {
+                    PPManager.Instance.ColorGrading.mixerRedOutRedIn.value = value;
+                }).delay = 0.4f;
+            });
         }
     }
 
