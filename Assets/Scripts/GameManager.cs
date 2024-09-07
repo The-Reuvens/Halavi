@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(WeightManager))]
+[RequireComponent(typeof(CustomCursor))]
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
@@ -12,6 +13,7 @@ public class GameManager : MonoBehaviour
     [Header("------- Managers -------")]
     public Player Player;
     public WeightManager WeightManager { get; private set; }
+    public CustomCursor CustomCursor { get; private set; }
 
     [Header("------- GameObjects -------")]
     [SerializeField] private Transform obstacalesContainer;
@@ -45,6 +47,11 @@ public class GameManager : MonoBehaviour
 
     private async void Start()
     {
+        WeightManager = GetComponent<WeightManager>();
+        CustomCursor = GetComponent<CustomCursor>();
+
+        Cursor.visible = false;
+
         await Task.Delay(1000);
 
         for (int i = 2; i >= 0; i--)
@@ -56,13 +63,13 @@ public class GameManager : MonoBehaviour
 
         blackScreen.alpha = 0;
         Destroy(counter);
+        Cursor.visible = true;
 
         var playerContainerRb = Player.transform.parent.GetComponent<Rigidbody>();
         playerContainerRb.useGravity = true;
         playerContainerRb.isKinematic = false;
 
         Vector3 playerContainerStartingPosition = Player.transform.parent.transform.position;
-        WeightManager = GetComponent<WeightManager>();
 
         for (float y = 100; y <= playerContainerStartingPosition.y - distanceFromFirstSpawn; y += endSpwanRate + (float)OMath.RandomDouble(-50, 50), endSpwanRate += endSpwanRate > 30 ? 1.5f : 0f, foodEndSpawnChance += foodEndSpawnChanceChangeRate, maxAmountPerSpawn -= maxAmountPerSpawn - amountPerSpawnChangeRate < 1 ? 0 : amountPerSpawnChangeRate)
         {
@@ -73,7 +80,6 @@ public class GameManager : MonoBehaviour
 
             for (ushort amount = 1; amount <= OMath.rnd.Next(1, (int)maxAmountPerSpawn); amount++)
             {
-                print(maxAmountPerSpawn);
                 Vector3 position = new(OMath.rnd.Next(-17, 17), y, OMath.rnd.Next(-7, 7));
 
                 while (previousObstaclePosition != Vector3.back && Vector3.Distance(position, previousObstaclePosition) < 9)
